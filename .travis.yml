@@ -1,0 +1,20 @@
+language: javascript
+
+before_install:
+  - npm install tiddlywiki
+
+install: true
+
+script:
+  - cp -r plugins/* node_modules/tiddlywiki/plugins/
+  - ./node_modules/.bin/tiddlywiki . --output output --build gui
+  - ./node_modules/.bin/tiddlywiki . --output output/library --build library
+
+deploy:
+  provider: pages
+  local-dir: output
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  on:
+    branch: master

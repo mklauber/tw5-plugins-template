@@ -1,0 +1,21 @@
+{
+	"description": "TiddlyWiki Plugin Library",
+	"plugins": [
+		"tiddlywiki/pluginlibrary"
+	],
+	"themes": [
+                "tiddlywiki/vanilla",
+                "tiddlywiki/snowwhite"
+	],
+	"includeWikis": [
+	],
+	"build": {
+		"library": [
+			"--makelibrary","$:/UpgradeLibrary",
+   			"--savelibrarytiddlers","$:/UpgradeLibrary","[prefix[$:/]] -[prefix[$:/plugins/tiddlywiki/]] -[prefix[$:/themes/tiddlywiki/]] -[prefix[$:/languages/]] -[[$:/plugins/tiddlywiki/upgrade]] -[[$:/plugins/tiddlywiki/translators]] -[[$:/plugins/tiddlywiki/pluginlibrary]] -[[$:/plugins/tiddlywiki/jasmine]]","recipes/library/tiddlers/","$:/UpgradeLibrary/List",
+   			"--savetiddler","$:/UpgradeLibrary/List","recipes/library/tiddlers.json",
+			"--rendertiddler","$:/plugins/tiddlywiki/pluginlibrary/library.template.html","index.html","text/plain"],
+		"gui": ["--load","gui/",
+			"--rendertiddler","$:/core/save/all","index.html","text/plain"]
+	}
+}
