@@ -20,7 +20,7 @@ Commit and push this code to github.com
 * Enable builds for your forked repository.
 
 * Generate a github token, ala https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/ to 
-allows travis-ci to upload to your github pages.  
+allows travis-ci to upload to your github pages.  You'll need to have repo scope on this token.  
 
 * Go to settings for your travis-ci job and add an environment variable with the name `GITHUB_TOKEN` and the set the value to 
 the github token string from the previous step.
