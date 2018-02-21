@@ -10,6 +10,8 @@ automatically update the library.  This README assumes familiarity with git and 
 
 * Fork this repository to your own github account.  
 
+* Go to settings on your repo, and most of the way down the page, there will be a section on "Github Pages".   You need to select the gh-pages branch as the source.
+
 * In `gui/Library.tid` replace `{GITHUB PAGES URL}` with the github pages url where you're planning to host this.  Typically, 
 this is of the form `{github username}.github.io/{repo name}.`  So for example, if my repository was available at 
 `https://github.com/mklauber/tw5-plugins` I would replace `{GITHUB PAGES URL}` with `mklauber.github.io/tw5-plugins`.  
@@ -25,11 +27,9 @@ allows travis-ci to upload to your github pages.  You'll need to have repo scope
 * Go to settings for your travis-ci job and add an environment variable with the name `GITHUB_TOKEN` and the set the value to 
 the github token string from the previous step.
 
-* At this point, travis should attempt to build and publish your plugins.  
+* At this point, travis should attempt to build and publish your plugins.  If all goes well, you should have a new branch named gh-pages.  
 
-* If all goes well, you should have a new branch named gh-pages.  Go to settings on your repo, and most of the way down the page, there will be a section on "Github Pages".   You need to select the gh-pages branch as the source.
-
-*Finally check your library at 
+* Finally check your library at 
 `{github username}.github.io/{repo name}.`
 
 
