@@ -25,7 +25,11 @@ allows travis-ci to upload to your github pages.  You'll need to have repo scope
 * Go to settings for your travis-ci job and add an environment variable with the name `GITHUB_TOKEN` and the set the value to 
 the github token string from the previous step.
 
-* At this point, travis should attempt to build and publish your plugins.  If all goes well, check your library at 
+* At this point, travis should attempt to build and publish your plugins.  
+
+* If all goes well, you should have a new branch named gh-pages.  Go to settings on your repo, and most of the way down the page, there will be a section on "Github Pages".   You need to select the gh-pages branch as the source.
+
+*Finally check your library at 
 `{github username}.github.io/{repo name}.`
 
 
