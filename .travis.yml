@@ -7,8 +7,8 @@ install: true
 
 script:
   - cp -r plugins/* node_modules/tiddlywiki/plugins/
-  - ./node_modules/.bin/tiddlywiki . --output output --build gui
   - ./node_modules/.bin/tiddlywiki . --output output/library --build library
+  - ./node_modules/.bin/tiddlywiki . --output output --build gui
 
 deploy:
   provider: pages
