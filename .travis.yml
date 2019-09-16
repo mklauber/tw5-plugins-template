@@ -6,7 +6,8 @@ before_install:
 install: true
 
 script:
-  - cp -r plugins/* node_modules/tiddlywiki/plugins/
+  - mkdir -p node_modules/tiddlywiki/plugins/published/
+  - cp -r plugins/* node_modules/tiddlywiki/plugins/published
   - ./node_modules/.bin/tiddlywiki . --output output/library --build library
   - ./node_modules/.bin/tiddlywiki . --output output --build gui
 
